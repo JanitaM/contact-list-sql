@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    integrity="sha256-ECB9bbROLGm8wOoEbHcHRxlHgzGqYpDtNTgDTyDz0wg=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <title>Contact List</title>
+</head>
+
+<body>
+  <main class="main-container container">
+    <nav id="nav-bar" class="u-pull-right">
+      <button id="add-contact-btn" class="button-primary">Add A Contact</button>
+      <a class="button" href="logout" id="log-out-btn">Log Out</a>
+    </nav>
+
+    <!-- Add Contact Button -->
+    <div id="contact-container" class="u-cf">
+      <h4>Add Contact</h4>
+      <!-- Add A Contact Form -->
+      <form id="contact-form" class="row">
+        <div class="three columns">
+          <input id="name" class="u-full-width" type="text" name="name" placeholder="NAME">
+        </div>
+        <div class="three columns">
+          <input id="phone" class="u-full-width" type="text" name="phone" placeholder="PHONE NUMBER">
+        </div>
+        <div class="three columns">
+          <input id="email" class="u-full-width" type="email" name="email" placeholder="EMAIL">
+        </div>
+        <div class="three columns">
+          <button id="submit-btn" class="button-primary" type="submit" value="Submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <!-- GET One Contact -->
+    <h4 class="u-cf">Contact List</h4>
+    <form id="get-one-contact" class="row">
+      <div>
+        <input id="search" class="nine columns" type="text" placeholder="TYPE NAME TO SEARCH">
+      </div>
+      <div class="three columns">
+        <button id="find-btn" class="button-primary">FIND AND UPDATE CONTACT</button>
+      </div>
+    </form>
+    <!-- Form to update contact -->
+    <div id="update-container">
+      <h4>Update Contact Information</h4>
+      <form id="update-form">
+        <div class="four columns">
+          <label for="new-name">Current Name:</label>
+          <label class="current-name"></label>
+          <input id="new-name" class="u-full-width" type="text" name="new-name">
+        </div>
+        <div class="four columns">
+          <label for="new-phone">Current Phone Number:</label>
+          <label class="current-phone"></label>
+          <input id="new-phone" class="u-full-width" type="text" name="new-phone">
+        </div>
+        <div class="four columns">
+          <label for="new-email">Current Email Address:</label>
+          <label class="current-email"></label>
+          <input id="new-email" class="u-full-width" type="email" name="new-email">
+        </div>
+      </form>
+      <div>
+        <button id="update-btn" class="u-full-width button-primary" type="submit" value="Update">UPDATE</button>
+      </div>
+      <div>
+        <button id="cancel-btn" class="u-full-width" type="submit" value="Update">CANCEL</button>
+      </div>
+    </div>
+    <!-- INSERT ALERT MESSAGE HERE -->
+    <hr class="message">
+    <!-- Table -->
+    <table class="u-full-width">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone Number</th>
+          <th>Email Address</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="contact-list">
+        <!-- add via UI -->
+      </tbody>
+    </table>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>
